@@ -6,56 +6,77 @@ public class CarSystem : MonoBehaviour
 {
     public List<CarEffects> errors = new List<CarEffects>();
 
-    private List<int> problemsDone = new List<int>();
-
     public int numberOfErrors = 3;
     private int randomProblem;
 
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < numberOfErrors; i++)
         {
-            randomProblem = Random.Range(1, 4);
-            for (int numbers = 0; numbers < problemsDone.Count; numbers++)
+            CarEffects item = null;
+
+            int counter = 0;
+            bool whil = false;
+
+            do
             {
-                if (problemsDone[numbers] != randomProblem)
+                randomProblem = Random.Range(1, 4);
+                switch (randomProblem)
                 {
-                    problemsDone.Add(randomProblem);
+                    case 1: // pintura
+                        item = new Paint();
+                        break;
+
+                    case 2: //ruedasWheels
+                        item = new Wheels();
+                        break;
+
+                    case 3: // luces
+                        item = new Lights();
+                        break;
+
+                    case 4: // nada
+                        item = null;
+                        break;
                 }
-                else
+
+                counter++;
+                if (counter > 50)
                 {
-                    randomProblem = Random.Range(1, 4);
+                    print("PENE");
+                    break;
                 }
-            }
-           
 
-            switch (randomProblem)
-            {
-                case 1: // pintura
-                    errors.Add(new Paint());
-                    break;
+                if(errors.Count != 0) {
+                    for (int e = 0; e < errors.Count; e++)
+                    {
+                       
+                        print(errors[e]);
+                    }
+                }
 
-                case 2: //ruedasWheels
-                    errors.Add(new Wheels ());
-                    break;
+                foreach (CarEffects x in errors)
+                {
+                    if(x.GetType() == item.GetType())
+                    {
+                        whil = true;
+                    }
+                }
+            } 
+            while (whil);
 
-                case 3: // luces
-                    errors.Add(new Lights());
-                    break;
+            
 
-                case 4: // nada
-                    errors.Add(new Nothing());
-                    break;
-
-                default: 
-                    break;
-            }
+            print(item);
+            errors.Add(item);
         }
 
-        for (int i = 0; i < errors.Count; i++)
+
+        for (int e = 0; e < errors.Count; e++)
         {
-            //ejecutar 
+            print(errors[e]);
         }
+       
 
     }
 
