@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
+        Debug.Log(movement);
         if (!sprinting)
         {
             rigidbody2d.velocity = movement * playerSpeed;
