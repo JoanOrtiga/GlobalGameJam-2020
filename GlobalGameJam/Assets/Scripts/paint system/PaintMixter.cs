@@ -21,8 +21,6 @@ public class PaintMixter : MonoBehaviour
 
     private int maxColors = 2;
    
-    
-
     // Update is called once per frame
     void Update()
     {
