@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5704415580576917260}
   - component: {fileID: 3950682669890215984}
+  - component: {fileID: -4862452071782120128}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3502016339543302535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2806304, y: -6.06747, z: 0}
+  m_LocalPosition: {x: 3.5353315, y: -6.5531597, z: 0}
   m_LocalScale: {x: 0.032095026, y: 0.032095026, z: 0.032095026}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4862452071782120128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502016339543302535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bbbe6ca201432448629d4e80144390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inHand: 3
