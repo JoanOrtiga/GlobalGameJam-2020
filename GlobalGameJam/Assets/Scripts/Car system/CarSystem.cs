@@ -8,6 +8,8 @@ public class CarSystem : MonoBehaviour
     public GameObject carStop;
     public GameObject carQuest;
 
+    public List<GameObject> carEffects = new List<GameObject>();
+
     private GameObject mom;
 
     public List<CarEffects> errors = new List<CarEffects>();
@@ -91,21 +93,37 @@ public class CarSystem : MonoBehaviour
             } 
             while (whil);
 
-
-
             if(item != null)
             {
                 errors.Add(item);
-            }
-            
+            }           
         }
 
-        for (int e = 0; e < errors.Count; e++)
+        for (int i = 0; i < carEffects.Count; i++)
         {
-            //print(errors[e]);
-            if (errors[e].typeOfEffect() == "wheels" || errors[e].typeOfEffect() == "lights")
+            int fails = 0;
+            foreach (CarEffects item in errors)
             {
-                //print(errors[e].effPosition());
+                if (item.typeOfEffect() == "oil" || item.typeOfEffect() == "engine" || item.typeOfEffect() == "paint")
+                {
+                    print(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() + " " + item.typeOfEffect());
+
+                    if(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() != item.typeOfEffect())
+                    {
+                        fails++;
+                    }
+                    else 
+                }
+                else if (x.typeOfEffect() == "wheels" || x.typeOfEffect() == "lights")
+                {
+                    if (x.typeOfEffect() == item.typeOfEffect())
+                    {
+                        if (x.effPosition() == item.effPosition())
+                        {
+                            whil = true;
+                        }
+                    }
+                }
             }
         }
     }
