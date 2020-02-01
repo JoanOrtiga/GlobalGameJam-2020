@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PaintMixter : MonoBehaviour
 {
-    public float timeToMakePaint = 5;
+    public float waitTime = 5;
+    private float timeToMakePaint;
+    public float fillAmount = 0.01f;
+
 
     //Primate colors
     private bool blue = false;
@@ -21,7 +25,9 @@ public class PaintMixter : MonoBehaviour
     //finish Mix
     private bool isMixting = false;
     private bool finishMix = false;
+    private bool progresBarWorking = false;
 
+    public Canvas canvas;
     public GameObject purpleGameObject;
     public GameObject orangeGameObject;
     public GameObject greenGameObject;
@@ -56,30 +62,33 @@ public class PaintMixter : MonoBehaviour
     {
         Mixter();
         countDown();
-        Debug.Log(finishMix);
-        //Debug.Log(timeToMakePaint);
+
+       
+       
         
 
     }
 
+    private void Start()
+    {
+        timeToMakePaint = waitTime;
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            if (finishMix == true && x == 1)
+            if (finishMix == true && x == 1) //COgiendo la mezcla
             {
-                purpleGameObject.transform.position = GameObject.FindWithTag("Player").transform.position;
-                greenGameObject.transform.position = GameObject.FindWithTag("Player").transform.position;
-                orangeGameObject.transform.position = GameObject.FindWithTag("Player").transform.position;
-
+                other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
+                childGameObject.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
                 childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo object hijo de la posicion de las manos
 
-                GameObject.FindWithTag("Player").transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
+                
                 finishMix = false;
             }
 
-            //PRIMERA PARTE
+            //PRIMERA PARTE poniendo colores 
             if ((other.GetComponentInChildren<PlayerInventary>().playerHaveAObject) && x == 1 && isMixting == false)
             {
                 
@@ -125,6 +134,7 @@ public class PaintMixter : MonoBehaviour
             blue = false;
             red = false;
             purple = true;
+           
         }
         else if (yellow == true && blue == true)
         {
@@ -132,6 +142,7 @@ public class PaintMixter : MonoBehaviour
             yellow = false;
             blue = false;
             green = true;
+           
         }
     }
 
@@ -141,11 +152,13 @@ public class PaintMixter : MonoBehaviour
 
         if (purple== true)
         {
+            ProgresBar();
             isMixting = true;
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
-                
+                canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
+                canvas.gameObject.SetActive(false);
                 purpleGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(purpleGameObject);
                 finishMix = true;
@@ -158,11 +171,13 @@ public class PaintMixter : MonoBehaviour
 
         else if (orange ==true)
         {
+            ProgresBar();
             isMixting = true;
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
-
+                canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
+                canvas.gameObject.SetActive(false);
                 orangeGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(orangeGameObject);
                 finishMix = true;
@@ -174,11 +189,13 @@ public class PaintMixter : MonoBehaviour
         }
          else if (green == true)
         {
+            ProgresBar();
             timeToMakePaint -= Time.deltaTime;
             isMixting = true;
             if (timeToMakePaint <= 0)
             {
-
+                canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
+                canvas.gameObject.SetActive(false);
                 greenGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(greenGameObject);
                 finishMix = true;
@@ -188,9 +205,12 @@ public class PaintMixter : MonoBehaviour
                 timeToMakePaint = 5;
             }
         }
+    }
 
-
-
+    void ProgresBar()
+    {  
+        canvas.gameObject.SetActive(true);
+        canvas.transform.GetChild(1).GetComponent<Image>().fillAmount += 1.0f / waitTime * Time.deltaTime;       
     }
     
   
