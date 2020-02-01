@@ -29,7 +29,7 @@ public class GarbageSystem : MonoBehaviour
         {
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == true)
             {
-                Debug.Log("DESTROY");
+               
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
                 Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
             }

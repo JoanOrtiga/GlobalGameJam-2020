@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     private InputMaster controls;
 
     private GameObject childGameObject;
+    private Animator animationWorkTable;
 
     private float x;
 
@@ -23,6 +24,9 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         controls = new InputMaster();
+        animationWorkTable = this.GetComponent<Animator>();
+        animationWorkTable.enabled = false;
+
         controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
         controls.Player1.Interact.canceled += ctx => x = 0;
     }
@@ -42,14 +46,15 @@ public class PickUp : MonoBehaviour
                 childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo light hijo d ela posicion de las manos
 
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
+                animationWorkTable.enabled = true;
+                
+
+
             }
             
         }
     }
 
-    private void FixedUpdate()
-    {
-        
-        
-    }
+   
+    
 }
