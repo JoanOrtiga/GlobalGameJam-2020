@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a2106752cd4186a4a9255354a9781976
+guid: 1c211e8ebf0b99e49bdb3384ccb60e40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8697547672624776786
-    second: objectes2_0
+      213: 2804095390035276536
+    second: LightTireEngine_0
+  - first:
+      213: -7242185040494971895
+    second: LightTireEngine_1
+  - first:
+      213: 1897189496910204357
+    second: LightTireEngine_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -48,8 +54,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 550
-  spriteBorder: {x: 0, y: 0, z: 1531, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -89,22 +95,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: objectes2_0
+      name: LightTireEngine_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 662
-        height: 668
+        y: 645
+        width: 1382
+        height: 2289
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eea5a893fe2593845a7cde0916b47682
-      internalID: 8697547672624776786
+      spriteID: 5b342a24f9b70a347bad8d4a37d6fa0a
+      internalID: 2804095390035276536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightTireEngine_1
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 394
+        width: 2529
+        height: 2530
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5445ed36e8d7c540bfee67bccf7642d
+      internalID: -7242185040494971895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightTireEngine_2
+      rect:
+        serializedVersion: 2
+        x: 4555
+        y: 0
+        width: 2494
+        height: 3318
+      alignment: 9
+      pivot: {x: 0.506442, y: 0.6501052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2ba4e432dec9b4d9e9777f1eec5664
+      internalID: 1897189496910204357
       vertices: []
       indices: 
       edges: []
