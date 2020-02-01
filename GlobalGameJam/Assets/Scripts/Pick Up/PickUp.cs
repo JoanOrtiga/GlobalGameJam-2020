@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public GameObject lightObjet;
+    public GameObject objectToPickUp;
     private InputMaster controls;
 
     private GameObject childGameObject;
@@ -40,8 +40,8 @@ public class PickUp : MonoBehaviour
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {
                 Debug.Log("Grabing a light");
-                lightObjet.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
-                childGameObject = Instantiate(lightObjet);
+                objectToPickUp.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
+                childGameObject = Instantiate(objectToPickUp);
 
                 childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo light hijo d ela posicion de las manos
 
