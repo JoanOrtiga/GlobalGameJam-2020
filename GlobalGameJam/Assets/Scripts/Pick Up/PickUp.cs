@@ -99,11 +99,7 @@ public class PickUp : MonoBehaviour
 
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
                 animationWorkTable.enabled = true;
-                
-
-
-            }
-            
+            }   
         }
     }
 

@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: b1507d8653724fa40a95c3f48e2dcbf4
+guid: c5388cd0aa8384542b5c2bf6740b0070
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7931214085456169881
-    second: animMotor_0
+      213: 7022554626730824627
+    second: BrokenLight_Back_Left
   - first:
-      213: 507346863201699438
-    second: animMotor_1
+      213: -5202870034397245910
+    second: BrokenLightsAndTiresAndProgressBar_1
   - first:
-      213: 2315274645432075332
-    second: animMotor_2
+      213: -2122692567267295598
+    second: BrokenLightsAndTiresAndProgressBar_2
   - first:
-      213: -6124043022695616516
-    second: animMotor_3
+      213: -1360278129954121689
+    second: BrokenLightsAndTiresAndProgressBar_3
+  - first:
+      213: -4010162260193853671
+    second: BrokenLight_Front_Left
+  - first:
+      213: 5243013142728224825
+    second: BrokenLight_Back_Right
+  - first:
+      213: 1020354487807826020
+    second: BrokenLight_Front_Right
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 1150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animMotor_0
+      name: BrokenLight_Back_Left
       rect:
         serializedVersion: 2
-        x: 13
-        y: 2223
-        width: 713
-        height: 713
+        x: 0
+        y: 1920
+        width: 890
+        height: 420
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1885054d0b84e45b5829365de89731
-      internalID: -7931214085456169881
+      spriteID: 3b31116d930257160800000000000000
+      internalID: 7022554626730824627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_1
+      name: BrokenLightsAndTiresAndProgressBar_1
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1482
-        width: 713
-        height: 713
+        x: 1956
+        y: 2962
+        width: 1804
+        height: 244
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab55b8211f9486419702f6072947366
-      internalID: 507346863201699438
+      spriteID: a2e4a3b0541bbc7b0800000000000000
+      internalID: -5202870034397245910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_2
+      name: BrokenLightsAndTiresAndProgressBar_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 739
-        width: 712
-        height: 711
+        x: 1895
+        y: 2512
+        width: 1929
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +163,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc736d62dc06624438c6c0fdb50344b5
-      internalID: 2315274645432075332
+      spriteID: 29ebba84b5eaa82e0800000000000000
+      internalID: -2122692567267295598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_3
+      name: BrokenLightsAndTiresAndProgressBar_3
       rect:
         serializedVersion: 2
-        x: 14
+        x: 6238
+        y: 2175
+        width: 1064
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7281a547f325f1de0800000000000000
+      internalID: -1360278129954121689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenLight_Front_Left
+      rect:
+        serializedVersion: 2
+        x: 4854
+        y: 1817
+        width: 880
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fb77dcbaa0958c0800000000000000
+      internalID: -4010162260193853671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenLight_Back_Right
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 712
-        height: 712
+        width: 885
+        height: 419
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +226,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 667ce65dec3944a43a79d94fb17a82c6
-      internalID: -6124043022695616516
+      spriteID: 9303505bcace2c840800000000000000
+      internalID: 5243013142728224825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenLight_Front_Right
+      rect:
+        serializedVersion: 2
+        x: 4854
+        y: 23
+        width: 880
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468d2c62007092e00800000000000000
+      internalID: 1020354487807826020
       vertices: []
       indices: 
       edges: []
