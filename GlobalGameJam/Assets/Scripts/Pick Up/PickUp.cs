@@ -86,7 +86,7 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        print(x);
+
         if (other.CompareTag("Player") && x == 1)
         {
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
