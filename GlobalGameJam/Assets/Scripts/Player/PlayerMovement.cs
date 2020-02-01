@@ -66,8 +66,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Vector2 moveDirection = rigidbody2d.velocity;
+        if (moveDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
-        
         if (!sprinting)
         {
             rigidbody2d.velocity = movement * playerSpeed;
