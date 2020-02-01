@@ -10,26 +10,41 @@ public class LightPickUp : MonoBehaviour
     private GameObject childGameObject;
 
     private float x;
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
     private void Awake()
     {
         controls = new InputMaster();
-        controls.Player1.Sprint.started += ctx => x = ctx.ReadValue<int>();
-        controls.Player1.Sprint.canceled += ctx => x = 0;
+        controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player1.Interact.canceled += ctx => x = 0;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    
+
+    private void OnTriggerStay2D(Collider2D other)
     {
+        print(x);
         if (other.CompareTag("Player") && x == 1)
         {
+
             Debug.Log("Grabing a light");
-            lightObjet.transform.position = GameObject.Find("HandsPosition").transform.position;
+            lightObjet.transform.position = other.transform.Find("HandsPosition").transform.position;
             childGameObject = Instantiate(lightObjet);
 
             childGameObject.transform.parent = GameObject.Find("HandsPosition").transform; //haciendo light hijo d ela posicion de las manos
-        }  
+        }
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(x);
+        
+        
     }
 }
