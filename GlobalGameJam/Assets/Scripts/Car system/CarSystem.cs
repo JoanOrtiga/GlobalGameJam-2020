@@ -147,6 +147,8 @@ public class CarSystem : MonoBehaviour
 
                 errors.Add(item);
             }
+
+         //   print(item);
         }
 
         //for (int i = 0; i < carEffects.Count; i++)
@@ -175,6 +177,11 @@ public class CarSystem : MonoBehaviour
         //        }
         //    }
         //}
+
+        for (int i = 0; i < errors.Count; i++)
+        {
+            print(errors[i]);
+        }
     }
 
     // Update is called once per frame
