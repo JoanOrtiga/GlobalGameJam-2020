@@ -109,12 +109,19 @@ public class FixObject : MonoBehaviour
                         case Item.yellow_paint:
                             break;
                     }
+
                     other.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
 
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
                     Destroy(gameObject.GetComponentInParent<Transform>().gameObject);
+
                 }
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 }

@@ -107,6 +107,12 @@ public class PickUp : MonoBehaviour
                 {
                     animationWorkTable.enabled = true;
                 }
+
+            /*    if(objectToPickUp.GetComponent<itemInHand>().inHand == Item.engine_broken)
+                {
+                    print("hola");
+                    transform.GetComponent<PickUp>().enabled = false;
+                }*/
             }   
         }
     }

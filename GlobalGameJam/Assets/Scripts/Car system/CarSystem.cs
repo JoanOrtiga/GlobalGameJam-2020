@@ -138,12 +138,13 @@ public class CarSystem : MonoBehaviour
         //carQuest.GetComponent<QuestManager>().Repaired(repaired, errors);
 
         int f = 0;
-        print(repaired);
+
         foreach (CarEffects item in errors)
         {
             if (item.typeOfEffect() == repaired)
             {
                 mom.transform.GetChild(f).GetComponent<Image>().enabled = false;
+                break;
             }   
             f++;
         }
