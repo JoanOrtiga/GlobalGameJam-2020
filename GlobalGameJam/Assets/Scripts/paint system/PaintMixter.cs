@@ -19,6 +19,7 @@ public class PaintMixter : MonoBehaviour
     private bool green = false;
 
     //finish Mix
+    private bool isMixting = false;
     private bool finishMix = false;
 
     public GameObject purpleGameObject;
@@ -79,7 +80,7 @@ public class PaintMixter : MonoBehaviour
             }
 
             //PRIMERA PARTE
-            if ((other.GetComponentInChildren<PlayerInventary>().playerHaveAObject) && x == 1)
+            if ((other.GetComponentInChildren<PlayerInventary>().playerHaveAObject) && x == 1 && isMixting == false)
             {
                 
                 if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.blue_paint && blue == false)
@@ -140,6 +141,7 @@ public class PaintMixter : MonoBehaviour
 
         if (purple== true)
         {
+            isMixting = true;
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
@@ -147,6 +149,7 @@ public class PaintMixter : MonoBehaviour
                 purpleGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(purpleGameObject);
                 finishMix = true;
+                isMixting = false;
 
                 purple = false;
                 timeToMakePaint = 5;
@@ -155,6 +158,7 @@ public class PaintMixter : MonoBehaviour
 
         else if (orange ==true)
         {
+            isMixting = true;
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
@@ -162,6 +166,7 @@ public class PaintMixter : MonoBehaviour
                 orangeGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(orangeGameObject);
                 finishMix = true;
+                isMixting = false;
 
                 orange = false;
                 timeToMakePaint = 5;
@@ -170,12 +175,14 @@ public class PaintMixter : MonoBehaviour
          else if (green == true)
         {
             timeToMakePaint -= Time.deltaTime;
+            isMixting = true;
             if (timeToMakePaint <= 0)
             {
 
                 greenGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(greenGameObject);
                 finishMix = true;
+                isMixting = false;
 
                 green = false;
                 timeToMakePaint = 5;
