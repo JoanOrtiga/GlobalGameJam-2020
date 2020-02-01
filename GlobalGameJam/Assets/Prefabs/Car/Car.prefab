@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 408515551}
   - component: {fileID: 408515550}
   m_Layer: 0
-  m_Name: BrokenWheel_front_left
+  m_Name: front_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &408515549
 Transform:
   m_ObjectHideFlags: 0
@@ -136,12 +136,12 @@ GameObject:
   - component: {fileID: 454625457}
   - component: {fileID: 454625456}
   m_Layer: 0
-  m_Name: BrokenWheel_front_right
+  m_Name: front_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454625455
 Transform:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &525746943
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &899410376
 Transform:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1079531800
 Transform:
   m_ObjectHideFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1230615467
 Transform:
   m_ObjectHideFlags: 0
@@ -751,12 +751,12 @@ GameObject:
   - component: {fileID: 2104422991}
   - component: {fileID: 2104422990}
   m_Layer: 0
-  m_Name: BrokenWheel_back_right
+  m_Name: back_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2104422989
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,6 +1007,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carStop: {fileID: 0}
   carQuest: {fileID: 783797186913329546, guid: c2d42c8c4568c2144ae3e97acf677c3c, type: 3}
+  carEffects:
+  - {fileID: 4146118320746642486}
+  - {fileID: 408515548}
+  - {fileID: 454625454}
+  - {fileID: 2104422988}
+  - {fileID: 5367365064485047134}
+  - {fileID: 899410375}
+  - {fileID: 1079531799}
+  - {fileID: 525746942}
+  - {fileID: 1230615466}
+  - {fileID: 3541293642912963496}
   numberOfErrors: 3
   debugFinish: 0
 --- !u!70 &8459180615554283053
@@ -1042,7 +1053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3735392576989121175
 Transform:
   m_ObjectHideFlags: 0
@@ -1114,7 +1125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8130326800244861280
 Transform:
   m_ObjectHideFlags: 0
@@ -1195,12 +1206,12 @@ GameObject:
   - component: {fileID: 1163256374}
   - component: {fileID: 401992971}
   m_Layer: 0
-  m_Name: BrokenWheel_back_right
+  m_Name: back_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2309866865958322300
 Transform:
   m_ObjectHideFlags: 0

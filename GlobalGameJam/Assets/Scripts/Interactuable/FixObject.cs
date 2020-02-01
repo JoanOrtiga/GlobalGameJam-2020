@@ -86,7 +86,7 @@ public class FixObject : MonoBehaviour
         {
             if (other.GetComponentInChildren<PlayerInventary>().playerHaveAObject)
             {
-                if (other.GetComponentInChildren<PlayerInventary>().GetComponentInChildren<itemInHand>().inHand == whatToDetect)
+                if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == whatToDetect)
                 {
                     switch (whatToDetect)
                     {

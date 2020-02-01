@@ -56,7 +56,7 @@ public class PaintMixter : MonoBehaviour
     {
         Mixter();
         countDown();
-        Debug.Log(finishMix);
+
         //Debug.Log(timeToMakePaint);
         
 
