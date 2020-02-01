@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1214990349
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -3658635824330303636, guid: 315b7d0ae442acc419c8be02b2e86f87,
     type: 3}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ce3f69be3ea97498ce14c5880c495f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPickUp: {fileID: 3137952544377571297, guid: f0aaf902f566a384a8f2112d42661611,
+  objectToPickUp: {fileID: 7992569689244677498, guid: f6e5333ba2ed574408888ba8a92d6c2c,
     type: 3}
 --- !u!95 &6892809224653325740
 Animator:
