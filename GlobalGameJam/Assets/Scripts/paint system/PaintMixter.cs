@@ -33,6 +33,7 @@ public class PaintMixter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+           
         }
     }
 
