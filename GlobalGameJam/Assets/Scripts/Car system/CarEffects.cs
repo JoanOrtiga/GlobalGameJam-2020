@@ -3,45 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+public enum carPositions
+{
+    front_left, front_right, back_left, back_right, no_position
+}
+
 public class CarEffects
 {
     public virtual string typeOfEffect()
     {
         return "carEffect";
     }
+
+    public virtual carPositions effPosition()
+    {
+        return carPositions.no_position;
+    }
 }
 
 public class Wheels : CarEffects
 {
-    private int wheels = 4;
-    private void Start()
+    public carPositions position;
+
+    public Wheels()
     {
-
-        if (wheels == 0)
-        {
-            //1 DONE
-
-        }
-       // Debug.Log("Wheels");
+        position = (carPositions)Random.Range(1, 5);
     }
 
     public override string typeOfEffect()
     {
         return "wheels";
     }
+
+    public override carPositions effPosition()
+    {
+        return position;
+    }
 }
 
 public class Lights : CarEffects
 {
-    private bool lights = false;
+    public carPositions position;
 
-    private void Start()
+    public Lights()
     {
-        if (lights == true)
-        {
-            //DONE -lista
-        }
-       // Debug.Log("Light");
+        position = (carPositions)Random.Range(1, 5);
     }
 
     public override string typeOfEffect()
@@ -49,45 +55,38 @@ public class Lights : CarEffects
         return "lights";
     }
 
+    public override carPositions effPosition()
+    {
+        return position;
+    }
+
 }
 
 public class Paint : CarEffects
 {
-
-
     //mix colors
     private bool purple; // color 1
     private bool orange; //color 2
     private bool green; // color 3
-
-    private int randomColor;
-
-    private void Start()
-    {
-        randomColor = Random.Range(1, 3);
-
-        switch (randomColor)
-        {
-            case 1: // purple
-
-                break;
-
-
-            case 2://orange
-                break;
-
-
-            case 3: // green
-                break;
-
-            default:
-                break;
-        }
-    }
-
     public override string typeOfEffect()
     {
         return "paint";
     }
 
+}
+
+public class Engine : CarEffects
+{
+    public override string typeOfEffect()
+    {
+        return "engine";
+    }
+}
+
+public class Oil : CarEffects
+{
+    public override string typeOfEffect()
+    {
+        return "oil";
+    }
 }

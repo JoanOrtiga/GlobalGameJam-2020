@@ -200,7 +200,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""c47ce1c7-04cd-4da5-b5b9-c6254254861f"",
-                    ""path"": ""<Keyboard>/quote"",
+                    ""path"": ""<Keyboard>/l"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",
@@ -211,7 +211,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""0445fabc-0e7a-4107-9695-6987642d91ab"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/quote"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard"",

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Car
+  - Quest
   layers:
   - Default
   - TransparentFX
@@ -49,4 +51,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 1937563227
+    locked: 0
+  - name: UI
+    uniqueID: 2030475587
     locked: 0
