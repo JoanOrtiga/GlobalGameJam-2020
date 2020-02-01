@@ -84,11 +84,8 @@ public class FixObject : MonoBehaviour
     {
         if (other.CompareTag("Player") && x == 1)
         {
-            
             if (other.GetComponentInChildren<PlayerInventary>().playerHaveAObject)
             {
-               
-
                 if (other.GetComponentInChildren<PlayerInventary>().GetComponentInChildren<itemInHand>().inHand == whatToDetect)
                 {
                     switch (whatToDetect)
