@@ -35,16 +35,16 @@ public class PlayerMovement : MonoBehaviour
                 controls.Player1.Sprint.started += ctx => Sprint();
                 break;
             case 2:
-                controls.Player1.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-                controls.Player1.Move.canceled += ctx => movement = Vector2.zero;
+                controls.Player2.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
+                controls.Player2.Move.canceled += ctx => movement = Vector2.zero;
                 break;
             case 3:
-                controls.Player1.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-                controls.Player1.Move.canceled += ctx => movement = Vector2.zero;
+                controls.Player3.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
+                controls.Player3.Move.canceled += ctx => movement = Vector2.zero;
                 break;
             case 4:
-                controls.Player1.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-                controls.Player1.Move.canceled += ctx => movement = Vector2.zero;
+                controls.Player4.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
+                controls.Player4.Move.canceled += ctx => movement = Vector2.zero;
                 break;
         } 
     }
