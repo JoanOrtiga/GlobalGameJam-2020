@@ -25,7 +25,6 @@ public class QuestManager : MonoBehaviour
             GetComponent<AudioSource>().Play();
             time = -500;
             car.GetComponent<CarSystem>().debugFinish = true;
-                        
             Destroy(gameObject, 0.5f);
         }
     }
@@ -97,5 +96,10 @@ public class QuestManager : MonoBehaviour
     private void OnDestroy()
     {
         GetComponent<AudioSource>().Stop();
+    }
+
+    public void finish()
+    {
+        Destroy(gameObject, 0.5f);
     }
 }
