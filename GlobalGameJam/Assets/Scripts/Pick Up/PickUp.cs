@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightPickUp : MonoBehaviour
+public class PickUp : MonoBehaviour
 {
     public GameObject lightObjet;
     private InputMaster controls;
