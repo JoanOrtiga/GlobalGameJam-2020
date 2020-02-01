@@ -157,13 +157,14 @@ public class PaintMixter : MonoBehaviour
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
+                GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 purpleGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(purpleGameObject);
                 finishMix = true;
                 isMixting = false;
-
+                
                 purple = false;
                 timeToMakePaint = 5;
             }
@@ -176,13 +177,14 @@ public class PaintMixter : MonoBehaviour
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
+                GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 orangeGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(orangeGameObject);
                 finishMix = true;
                 isMixting = false;
-
+                
                 orange = false;
                 timeToMakePaint = 5;
             }
@@ -194,13 +196,14 @@ public class PaintMixter : MonoBehaviour
             isMixting = true;
             if (timeToMakePaint <= 0)
             {
+                GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 greenGameObject.transform.position = this.gameObject.transform.position;
                 childGameObject = Instantiate(greenGameObject);
                 finishMix = true;
                 isMixting = false;
-
+                
                 green = false;
                 timeToMakePaint = 5;
             }
@@ -208,7 +211,8 @@ public class PaintMixter : MonoBehaviour
     }
 
     void ProgresBar()
-    {  
+    {
+        GetComponent<Animator>().SetBool("isWorking", true);
         canvas.gameObject.SetActive(true);
         canvas.transform.GetChild(1).GetComponent<Image>().fillAmount += 1.0f / waitTime * Time.deltaTime;       
     }
