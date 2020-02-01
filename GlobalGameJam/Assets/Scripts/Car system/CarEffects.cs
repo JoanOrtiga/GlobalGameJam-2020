@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class CarEffects
 {
-
+    public virtual string typeOfEffect()
+    {
+        return "carEffect";
+    }
 }
 
 public class Wheels : CarEffects
@@ -22,9 +25,9 @@ public class Wheels : CarEffects
        // Debug.Log("Wheels");
     }
 
-    public Wheels()
+    public override string typeOfEffect()
     {
-      //  Debug.Log("Wheels");
+        return "wheels";
     }
 }
 
@@ -41,9 +44,9 @@ public class Lights : CarEffects
        // Debug.Log("Light");
     }
 
-    public Lights()
+    public override string typeOfEffect()
     {
-       // Debug.Log("Lights");
+        return "lights";
     }
 
 }
@@ -82,9 +85,9 @@ public class Paint : CarEffects
         }
     }
 
-    public Paint()
+    public override string typeOfEffect()
     {
-        //Debug.Log("Paint");
+        return "paint";
     }
 
 }

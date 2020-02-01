@@ -20,7 +20,8 @@ public class CarSystem : MonoBehaviour
 
             do
             {
-                randomProblem = Random.Range(1, 4);
+                whil = false;
+                randomProblem = Random.Range(1, 5);
                 switch (randomProblem)
                 {
                     case 1: // pintura
@@ -37,47 +38,44 @@ public class CarSystem : MonoBehaviour
 
                     case 4: // nada
                         item = null;
+                        print("hola");
                         break;
                 }
 
+            //    print(item);
+
                 counter++;
-                if (counter > 50)
+                if (counter > 10)
                 {
                     print("PENE");
                     break;
                 }
 
-                if(errors.Count != 0) {
-                    for (int e = 0; e < errors.Count; e++)
-                    {
-                       
-                        print(errors[e]);
-                    }
-                }
-
-                foreach (CarEffects x in errors)
+                if(item != null)
                 {
-                    if(x.GetType() == item.GetType())
+                    foreach (CarEffects x in errors)
                     {
-                        whil = true;
+                        if (x.typeOfEffect() == item.typeOfEffect())
+                        {
+                            whil = true;
+                        }
                     }
                 }
+                
             } 
             while (whil);
 
+            if(item != null)
+            {
+                errors.Add(item);
+            }
             
-
-            print(item);
-            errors.Add(item);
         }
-
 
         for (int e = 0; e < errors.Count; e++)
         {
             print(errors[e]);
         }
-       
-
     }
 
     // Update is called once per frame

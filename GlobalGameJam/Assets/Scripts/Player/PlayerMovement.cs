@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private float sprintCooldown = 0.5f;
     public float configSprintCooldown = 0.5f;
 
+    private float x;
+
 
     private void Awake()
     {
@@ -64,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        print(x);
+
         if (!sprinting)
         {
             rigidbody2d.velocity = movement * playerSpeed;
