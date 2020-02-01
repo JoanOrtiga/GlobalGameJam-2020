@@ -31,17 +31,8 @@ public class PaintMixter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Yellow"))
+        if (other.CompareTag("Player"))
         {
-            yellow = true;
-        }
-        else if (other.CompareTag("Blue"))
-        {
-            blue = true;
-        }
-        else if (other.CompareTag("Red"))
-        {
-            red = true;
         }
     }
 
@@ -50,6 +41,8 @@ public class PaintMixter : MonoBehaviour
         if (yellow == true && red == true)
         {
             orange = true;
+            yellow = false;
+            red = false;
             countDown();
         }
         else if (blue == true && red == true)

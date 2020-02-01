@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7268792377559018086}
   - component: {fileID: 7223650874006278144}
   m_Layer: 0
-  m_Name: BluePaint
+  m_Name: Blue Paint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

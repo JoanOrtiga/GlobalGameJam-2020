@@ -39,11 +39,11 @@ public class PickUp : MonoBehaviour
         {
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {
-                Debug.Log("Grabing a light");
+                
                 objectToPickUp.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
                 childGameObject = Instantiate(objectToPickUp);
 
-                childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo light hijo d ela posicion de las manos
+                childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo object hijo de la posicion de las manos
 
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
                 animationWorkTable.enabled = true;
