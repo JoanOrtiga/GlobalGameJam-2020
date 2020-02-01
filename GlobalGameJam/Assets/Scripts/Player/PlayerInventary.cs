@@ -10,6 +10,5 @@ public class PlayerInventary : MonoBehaviour
     {
         playerHaveAObject = false;
     }
-
-    
 }
+    

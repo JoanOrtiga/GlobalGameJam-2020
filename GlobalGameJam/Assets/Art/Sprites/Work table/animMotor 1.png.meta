@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: b1507d8653724fa40a95c3f48e2dcbf4
+guid: da0f02cb9afeb284f8e8b11b496c1945
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7931214085456169881
-    second: animMotor_0
+      213: 8958708440274211839
+    second: animMotor 1_0
   - first:
-      213: 507346863201699438
-    second: animMotor_1
+      213: 2183009251613639421
+    second: animMotor 1_1
   - first:
-      213: 2315274645432075332
-    second: animMotor_2
+      213: -5864550954306022688
+    second: animMotor 1_2
   - first:
-      213: -6124043022695616516
-    second: animMotor_3
+      213: -4746301167150033045
+    second: animMotor 1_3
+  - first:
+      213: -6228314100604133047
+    second: animMotor 1_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 550
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,85 +101,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animMotor_0
+      name: animMotor 1_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 2223
-        width: 713
-        height: 713
+        x: 11
+        y: 2392
+        width: 562
+        height: 563
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1885054d0b84e45b5829365de89731
-      internalID: -7931214085456169881
+      spriteID: ff396d47cd9b35c70800000000000000
+      internalID: 8958708440274211839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_1
+      name: animMotor 1_1
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1482
-        width: 713
-        height: 713
+        x: 10
+        y: 1787
+        width: 563
+        height: 564
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab55b8211f9486419702f6072947366
-      internalID: 507346863201699438
+      spriteID: df282d7295b9b4e10800000000000000
+      internalID: 2183009251613639421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_2
+      name: animMotor 1_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 739
-        width: 712
-        height: 711
+        x: 10
+        y: 1184
+        width: 563
+        height: 567
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc736d62dc06624438c6c0fdb50344b5
-      internalID: 2315274645432075332
+      spriteID: 0e259619afdec9ea0800000000000000
+      internalID: -5864550954306022688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animMotor_3
+      name: animMotor 1_3
       rect:
         serializedVersion: 2
-        x: 14
+        x: 10
+        y: 594
+        width: 563
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6710074c30c12eb0800000000000000
+      internalID: -4746301167150033045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animMotor 1_4
+      rect:
+        serializedVersion: 2
+        x: 10
         y: 0
-        width: 712
-        height: 712
+        width: 563
+        height: 565
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 667ce65dec3944a43a79d94fb17a82c6
-      internalID: -6124043022695616516
+      spriteID: 9412fe313559099a0800000000000000
+      internalID: -6228314100604133047
       vertices: []
       indices: 
       edges: []

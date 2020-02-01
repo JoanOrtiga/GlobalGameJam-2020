@@ -183,8 +183,8 @@ MonoBehaviour:
   - {fileID: -6931339683150358059, guid: ed43d25519147664eb7520534d4ed116, type: 3}
   - {fileID: -8179040606652740800, guid: ed43d25519147664eb7520534d4ed116, type: 3}
   progressBar: {fileID: 194941789}
-  time: 5
-  InitialTime: 5
+  time: 20
+  InitialTime: 20
 --- !u!82 &6842232608404104700
 AudioSource:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783797187080192502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

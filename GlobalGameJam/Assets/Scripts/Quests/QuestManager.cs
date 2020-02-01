@@ -43,7 +43,6 @@ public class QuestManager : MonoBehaviour
             Destroy(images[2].transform.gameObject);
             Destroy(images[1].transform.gameObject);
 
-
         }
 
         foreach (CarEffects x in errors)
@@ -53,24 +52,46 @@ public class QuestManager : MonoBehaviour
                 
                 case "lights":
                     images[f].sprite = icons[1];
+                    
                     break;
                 case "wheels":
                     images[f].sprite = icons[5];
+                    
+
                     break;
                 case "paint":
                     images[f].sprite = icons[2];
+                    
+
                     break;
                 case "engine":
                     images[f].sprite = icons[0];
+                    
+
                     break;
                 case "oil":
                     images[f].sprite = icons[6];
+                    
                     break;
             }
             f++;
-        }
+        }  
 
-       
+
+    }
+
+    public void Repaired(string fixing, List<CarEffects> errors)
+    {
+        int f = 0;
+        print(fixing);
+        foreach (CarEffects item in errors)
+        {
+            if(item.typeOfEffect() == fixing)
+            {
+                transform.GetChild(f).GetComponent<Image>().enabled = false;
+            }
+            f++;
+        }
     }
 
     private void OnDestroy()
