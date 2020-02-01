@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class GiveEngine : MonoBehaviour
 {
-    public GameObject objectToPickUp;
     private InputMaster controls;
-
-    private GameObject childGameObject;
-    private Animator animationWorkTable;
-
     private float x;
 
     private void OnEnable()
@@ -24,12 +19,7 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         controls = new InputMaster();
-        if(GetComponent<Animator>() != null)
-        {
-            animationWorkTable = this.GetComponent<Animator>();
-            animationWorkTable.enabled = false;
-        }
-        
+
 
         controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
         controls.Player1.Interact.canceled += ctx => x = 0;
@@ -37,11 +27,11 @@ public class PickUp : MonoBehaviour
         controls.Player2.Interact.started += ctx => x = ctx.ReadValue<float>();
         controls.Player2.Interact.canceled += ctx => x = 0;
 
-  //      controls.Player3.Interact.started += ctx => x = ctx.ReadValue<float>();
-   //     controls.Player3.Interact.canceled += ctx => x = 0;
+        //      controls.Player3.Interact.started += ctx => x = ctx.ReadValue<float>();
+        //     controls.Player3.Interact.canceled += ctx => x = 0;
 
-    //    controls.Player4.Interact.started += ctx => x = ctx.ReadValue<float>();
-    //    controls.Player4.Interact.canceled += ctx => x = 0;
+        //    controls.Player4.Interact.started += ctx => x = ctx.ReadValue<float>();
+        //    controls.Player4.Interact.canceled += ctx => x = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -90,27 +80,19 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-
         if (other.CompareTag("Player") && x == 1)
         {
-            if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
+            if (other.GetComponentInChildren<PlayerInventary>().playerHaveAObject)
             {
-                
-                objectToPickUp.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
-                childGameObject = Instantiate(objectToPickUp);
-
-                childGameObject.transform.parent = other.transform.GetComponentInChildren<PlayerInventary>().transform; //haciendo object hijo de la posicion de las manos
-
-                other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
-
-                if (GetComponent<Animator>() != null)
+                if (other.GetComponentInChildren<PlayerInventary>().GetComponentInChildren<itemInHand>().inHand == Item.engine_repaired)
                 {
-                    animationWorkTable.enabled = true;
+                    transform.GetComponentInParent<CarSystem>().repared("engine");
+                    other.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
+
+                    Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
+                    Destroy(gameObject.GetComponentInParent<Transform>().gameObject);
                 }
-            }   
+            }
         }
     }
-
-   
-    
 }

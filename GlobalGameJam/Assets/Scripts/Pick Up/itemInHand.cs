@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Item
 {
-    engine, oil, light, wheel, blue_paint, red_paint, yellow_paint
+    engine_broken, engine_repaired, oil, light, wheel, blue_paint, red_paint, yellow_paint
 }
 public class itemInHand : MonoBehaviour
 {

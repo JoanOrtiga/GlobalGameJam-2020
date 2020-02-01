@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarSystem : MonoBehaviour
 {
     public GameObject carStop;
     public GameObject carQuest;
+
+    private GameObject mom;
 
     public List<CarEffects> errors = new List<CarEffects>();
 
@@ -99,10 +102,10 @@ public class CarSystem : MonoBehaviour
 
         for (int e = 0; e < errors.Count; e++)
         {
-            print(errors[e]);
+            //print(errors[e]);
             if (errors[e].typeOfEffect() == "wheels" || errors[e].typeOfEffect() == "lights")
             {
-                print(errors[e].effPosition());
+                //print(errors[e].effPosition());
             }
         }
     }
@@ -125,10 +128,24 @@ public class CarSystem : MonoBehaviour
     {
         GameObject questCanvas = GameObject.FindGameObjectWithTag("Quest");
 
-        GameObject mom = Instantiate(carQuest, questCanvas.transform);
+        mom = Instantiate(carQuest, questCanvas.transform);
         mom.GetComponent<QuestManager>().SetupQuest(errors);
-        mom.GetComponent<QuestManager>().car = gameObject;
-        
+      
+    }
 
+    public void repared(string repaired)
+    {
+        //carQuest.GetComponent<QuestManager>().Repaired(repaired, errors);
+
+        int f = 0;
+        print(repaired);
+        foreach (CarEffects item in errors)
+        {
+            if (item.typeOfEffect() == repaired)
+            {
+                mom.transform.GetChild(f).GetComponent<Image>().enabled = false;
+            }
+            f++;
+        }
     }
 }
