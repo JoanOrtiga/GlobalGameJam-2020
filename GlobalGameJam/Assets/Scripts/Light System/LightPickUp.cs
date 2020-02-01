@@ -18,16 +18,18 @@ public class LightPickUp : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") )
+        if (other.CompareTag("Player") && x == 1)
         {
             Debug.Log("Grabing a light");
             lightObjet.transform.position = GameObject.Find("HandsPosition").transform.position;
             childGameObject = Instantiate(lightObjet);
-           
-            childGameObject.transform.parent = GameObject.Find("HandsPosition").transform; //haciendo light hijo d ela posicion de las manos
 
-            
-           
+            childGameObject.transform.parent = GameObject.Find("HandsPosition").transform; //haciendo light hijo d ela posicion de las manos
         }  
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.Log(x);
     }
 }
