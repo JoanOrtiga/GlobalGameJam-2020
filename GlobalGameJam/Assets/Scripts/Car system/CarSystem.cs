@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CarSystem : MonoBehaviour
 {
+    public GameObject carStop;
+    public GameObject carQuest;
+
     public List<CarEffects> errors = new List<CarEffects>();
 
     public int numberOfErrors = 3;
     private int randomProblem;
+
+    public bool debugFinish = false;
 
     void Awake()
     {
@@ -21,7 +26,7 @@ public class CarSystem : MonoBehaviour
             do
             {
                 whil = false;
-                randomProblem = Random.Range(1, 5);
+                randomProblem = Random.Range(1, 7);
                 switch (randomProblem)
                 {
                     case 1: // pintura
@@ -38,11 +43,16 @@ public class CarSystem : MonoBehaviour
 
                     case 4: // nada
                         item = null;
-                        print("hola");
+                        break;
+
+                    case 5:
+                        item = new Engine();
+                        break;
+
+                    case 6:
+                        item = new Oil();
                         break;
                 }
-
-            //    print(item);
 
                 counter++;
                 if (counter > 10)
@@ -55,15 +65,30 @@ public class CarSystem : MonoBehaviour
                 {
                     foreach (CarEffects x in errors)
                     {
-                        if (x.typeOfEffect() == item.typeOfEffect())
+                        if(x.typeOfEffect() == "oil" || x.typeOfEffect() == "engine" || x.typeOfEffect() == "paint")
                         {
-                            whil = true;
+                            if (x.typeOfEffect() == item.typeOfEffect())
+                            {
+                                whil = true;
+                            }
                         }
+                        else if(x.typeOfEffect() == "wheels" || x.typeOfEffect() == "lights")
+                        {
+                            if (x.typeOfEffect() == item.typeOfEffect())
+                            {
+                                if(x.effPosition() == item.effPosition())
+                                {
+                                    whil = true;
+                                }
+                            }
+                        } 
                     }
                 }
                 
             } 
             while (whil);
+
+
 
             if(item != null)
             {
@@ -75,12 +100,35 @@ public class CarSystem : MonoBehaviour
         for (int e = 0; e < errors.Count; e++)
         {
             print(errors[e]);
+            if (errors[e].typeOfEffect() == "wheels" || errors[e].typeOfEffect() == "lights")
+            {
+                print(errors[e].effPosition());
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (debugFinish)
+        {
+            errors.Clear();
+            this.GetComponent<CarMovement>().move = true;
+            carStop.GetComponent<CarStop>().carStopped = false;
+            debugFinish = false;
+
+            Destroy(this.gameObject, 5f);
+        }
+
+    }
+    public void createQuest()
+    {
+        GameObject questCanvas = GameObject.FindGameObjectWithTag("Quest");
+
+        GameObject mom = Instantiate(carQuest, questCanvas.transform);
+        mom.GetComponent<QuestManager>().SetupQuest(errors);
+        mom.GetComponent<QuestManager>().car = gameObject;
         
+
     }
 }
