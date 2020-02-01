@@ -11,14 +11,6 @@ public class CarSpawn : MonoBehaviour
     void Start()
     {
         Instantiate(car, this.transform.position, transform.rotation);
-        //InvokeRepeating("spawn", 3, 10f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
     }
 
     public void spawn()

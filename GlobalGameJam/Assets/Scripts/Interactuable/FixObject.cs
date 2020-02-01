@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiveEngine : MonoBehaviour
+public class FixObject : MonoBehaviour
 {
     private InputMaster controls;
     private float x;
+
+    public Item whatToDetect;
 
     private void OnEnable()
     {
@@ -82,11 +84,34 @@ public class GiveEngine : MonoBehaviour
     {
         if (other.CompareTag("Player") && x == 1)
         {
+            
             if (other.GetComponentInChildren<PlayerInventary>().playerHaveAObject)
             {
-                if (other.GetComponentInChildren<PlayerInventary>().GetComponentInChildren<itemInHand>().inHand == Item.engine_repaired)
+               
+
+                if (other.GetComponentInChildren<PlayerInventary>().GetComponentInChildren<itemInHand>().inHand == whatToDetect)
                 {
-                    transform.GetComponentInParent<CarSystem>().repared("engine");
+                    switch (whatToDetect)
+                    {
+                        case Item.engine_repaired:
+                            transform.GetComponentInParent<CarSystem>().repared("engine");
+                            break;
+                        case Item.oil:
+                            transform.GetComponentInParent<CarSystem>().repared("oil");
+                            break;
+                        case Item.light:
+                            transform.GetComponentInParent<CarSystem>().repared("lights");
+                            break;
+                        case Item.wheel:
+                            transform.GetComponentInParent<CarSystem>().repared("wheels");
+                            break;
+                        case Item.blue_paint:
+                            break;
+                        case Item.red_paint:
+                            break;
+                        case Item.yellow_paint:
+                            break;
+                    }
                     other.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
 
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);

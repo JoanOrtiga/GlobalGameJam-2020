@@ -144,7 +144,7 @@ public class CarSystem : MonoBehaviour
             if (item.typeOfEffect() == repaired)
             {
                 mom.transform.GetChild(f).GetComponent<Image>().enabled = false;
-            }
+            }   
             f++;
         }
     }
