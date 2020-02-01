@@ -22,11 +22,12 @@ public class PlayerMovement : MonoBehaviour
     private float sprintCooldown = 0.5f;
     public float configSprintCooldown = 0.5f;
 
+    private float x;
+
 
     private void Awake()
     {
         controls = new InputMaster();
-
         switch (PlayerNumber)
         {
             case 1:

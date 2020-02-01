@@ -3,22 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CarEffects : MonoBehaviour
+public class CarEffects
 {
-
-    // Start is called before the first frame update
-    void Start()
+    public virtual string typeOfEffect()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        return "carEffect";
     }
 }
-
 
 public class Wheels : CarEffects
 {
@@ -31,7 +22,12 @@ public class Wheels : CarEffects
             //1 DONE
 
         }
-        Debug.Log("Wheels");
+       // Debug.Log("Wheels");
+    }
+
+    public override string typeOfEffect()
+    {
+        return "wheels";
     }
 }
 
@@ -45,7 +41,12 @@ public class Lights : CarEffects
         {
             //DONE -lista
         }
-        Debug.Log("Light");
+       // Debug.Log("Light");
+    }
+
+    public override string typeOfEffect()
+    {
+        return "lights";
     }
 
 }
@@ -84,11 +85,9 @@ public class Paint : CarEffects
         }
     }
 
-}
-public class Nothing : CarEffects
-{
-    private void Start()
+    public override string typeOfEffect()
     {
-        Debug.Log("Nothing");
+        return "paint";
     }
+
 }
