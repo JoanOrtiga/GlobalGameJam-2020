@@ -49,11 +49,6 @@ public class QuestManager : MonoBehaviour
 
         }
 
-        for (int i = 0; i < errors.Count; i++)
-        {
-            print(errors[i]);
-        }
-
         foreach (CarEffects x in errors)
         {
             switch (x.typeOfEffect())
