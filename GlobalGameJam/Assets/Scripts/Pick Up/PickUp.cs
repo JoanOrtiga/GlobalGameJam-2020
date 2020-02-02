@@ -24,11 +24,7 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         controls = new InputMaster();
-        if(GetComponent<Animator>() != null)
-        {
-            animationWorkTable = this.GetComponent<Animator>();
-            animationWorkTable.enabled = false;
-        }
+        
         
 
         controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
@@ -95,7 +91,7 @@ public class PickUp : MonoBehaviour
         {
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {
-                
+                GetComponent<Animator>().SetBool("IsOpen", true);
                 objectToPickUp.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
                 childGameObject = Instantiate(objectToPickUp);
 
@@ -103,10 +99,7 @@ public class PickUp : MonoBehaviour
 
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
 
-                if (GetComponent<Animator>() != null)
-                {
-                    animationWorkTable.enabled = true;
-                }
+               
 
             /*    if(objectToPickUp.GetComponent<itemInHand>().inHand == Item.engine_broken)
                 {
@@ -117,6 +110,9 @@ public class PickUp : MonoBehaviour
         }
     }
 
-   
+   public void stopAnim()
+    {
+        GetComponent<Animator>().SetBool("IsOpen", false);
+    }
     
 }
