@@ -11,13 +11,15 @@ public class PaintMixter : MonoBehaviour
 
 
     //Primate colors
-    public Sprite blueIcon;
-    public Sprite redIcon;
-    public Sprite yellowIcon;
-   
+    public GameObject blueIconLeft;
+    public GameObject redIconLeft;
+    public GameObject yellowIconLeft;
 
-    public GameObject IconOne;
-    public GameObject IconTwo;
+    public GameObject blueIconRight;
+    public GameObject redIconRight;
+    public GameObject yellowIconRight;
+
+
 
     private bool icon1Used = false;
     private bool icon2Used = false;
@@ -77,8 +79,16 @@ public class PaintMixter : MonoBehaviour
         Mixter();
         countDown();
 
-       
-       
+
+        if (finishMix)
+        {
+            blueIconLeft.SetActive(false);
+            blueIconRight.SetActive(false);
+            redIconLeft.SetActive(false);
+            redIconRight.SetActive(false);
+            yellowIconLeft.SetActive(false);
+            yellowIconRight.SetActive(false);
+        }
         
 
     }
@@ -110,24 +120,49 @@ public class PaintMixter : MonoBehaviour
                 {
                     if (icon1Used == false)
                     {
-
+                        blueIconLeft.SetActive(true);
+                        icon1Used = true;
                     }
                     else if (icon1Used == true && icon2Used == false)
                     {
-
+                        blueIconRight.SetActive(true);
+                        icon2Used = true;
                     }
+                    
                     other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
                     blue = true;
                 }
                 else if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.yellow_paint && yellow == false)
                 {
+                    if (icon1Used == false)
+                    {
+                        yellowIconLeft.SetActive(true);
+                        icon1Used = true;
+                    }
+                    else if (icon1Used == true && icon2Used == false)
+                    {
+                        yellowIconRight.SetActive(true);
+                        icon2Used = true;
+                    }
+                   
                     other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
                     yellow = true;
                 }
                 else if(other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.red_paint && red == false)             
                 {
+                    if (icon1Used == false)
+                    {
+                        redIconLeft.SetActive(true);
+                        icon1Used = true;
+                    }
+                    else if (icon1Used == true && icon2Used == false)
+                    {
+                        redIconRight.SetActive(true);
+                        icon2Used = true;
+                    }
+                   
                     other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
                     red = true;
@@ -179,6 +214,9 @@ public class PaintMixter : MonoBehaviour
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
+                icon1Used = false;
+                icon2Used = false;
+                Destroy(GameObject.Find("Blue Icon"));
                 GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
@@ -199,6 +237,8 @@ public class PaintMixter : MonoBehaviour
             timeToMakePaint -= Time.deltaTime;
             if (timeToMakePaint <= 0)
             {
+                icon1Used = false;
+                icon2Used = false;
                 GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
@@ -218,6 +258,8 @@ public class PaintMixter : MonoBehaviour
             isMixting = true;
             if (timeToMakePaint <= 0)
             {
+                icon1Used = false;
+                icon2Used = false;
                 GetComponent<Animator>().SetBool("isWorking", false);
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
