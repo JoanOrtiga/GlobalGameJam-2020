@@ -184,8 +184,8 @@ MonoBehaviour:
   - {fileID: -6931339683150358059, guid: ed43d25519147664eb7520534d4ed116, type: 3}
   - {fileID: -8179040606652740800, guid: ed43d25519147664eb7520534d4ed116, type: 3}
   progressBar: {fileID: 194941789}
-  time: 20
-  InitialTime: 20
+  time: 18
+  InitialTime: 18
 --- !u!82 &6842232608404104700
 AudioSource:
   m_ObjectHideFlags: 0
