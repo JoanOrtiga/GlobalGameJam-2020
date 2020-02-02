@@ -33,7 +33,7 @@ public class CarMovement : MonoBehaviour
         {
             if (questCreated == false && inMechanic == true)
             {
-                print("XD");
+
                 questCreated = true;
                 GetComponent<CarSystem>().createQuest();
             }

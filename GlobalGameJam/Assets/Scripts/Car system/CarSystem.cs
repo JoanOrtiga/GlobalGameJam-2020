@@ -226,7 +226,6 @@ public class CarSystem : MonoBehaviour
         {
             errors.Clear();
             this.GetComponent<CarMovement>().move = true;
-            print(GetComponent<CarMovement>().move);
             carStop.GetComponent<CarStop>().carStopped = false;
             debugFinish = false;
 
