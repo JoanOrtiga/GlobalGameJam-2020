@@ -93,7 +93,6 @@ public class PickUp : MonoBehaviour
 
         if (other.CompareTag("Player") && x == 1 && player == other.GetComponent<PlayerMovement>().PlayerNumber)
         {
-            print(x + " " + player + " " + other.GetComponent<PlayerMovement>().PlayerNumber);
 
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {

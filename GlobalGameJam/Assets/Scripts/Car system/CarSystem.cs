@@ -97,7 +97,6 @@ public class CarSystem : MonoBehaviour
 
             if (item != null)
             {
-                print(item);        
 
                 if (item.typeOfEffect() == "oil")
                 {
@@ -111,24 +110,19 @@ public class CarSystem : MonoBehaviour
                 {
                     if (item.typeOfEffect() == "wheels")
                     {
-                        print(item.effPosition());
                         switch (item.effPosition())
                         {
                             case carPositions.front_left:
                                 carEffects[1].SetActive(true);
-                                print("rodas1");
                                 break;
                             case carPositions.front_right:
                                 carEffects[2].SetActive(true);
-                                print("rodas2");
                                 break;
                             case carPositions.back_left:
                                 carEffects[3].SetActive(true);
-                                print("rodas3");
                                 break;
                             case carPositions.back_right:
                                 carEffects[4].SetActive(true);
-                                print("rodas4");
                                 break;
                         }
                     }
@@ -223,6 +217,7 @@ public class CarSystem : MonoBehaviour
 
         foreach (CarEffects item in errors)
         {
+            print(item.typeOfEffect() + " " + repaired);
             if (item.typeOfEffect() == repaired)
             {
                 if(item.typeOfEffect() == "paint")
