@@ -10,13 +10,14 @@ public class PlayTutorialScript : MonoBehaviour
     public GameObject startButton;
     public GameObject exitButton;
 
+    public GameObject controls;
     public GameObject lights;
     public GameObject wheels;
     public GameObject oil;
     public GameObject paint;    
     public GameObject motor;
 
-    private int counter = 0;
+    private int counter = -1;
     private void Start()
     {
         tutorial.SetActive(false);
@@ -33,7 +34,11 @@ public class PlayTutorialScript : MonoBehaviour
     public void Next()
     {
         counter++;
-        if (counter == 1)
+        if (counter == 0)
+        {
+            lights.SetActive(true);
+        }
+        else if (counter == 1)
         {
             wheels.SetActive(true);       
         }
