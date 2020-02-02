@@ -10,6 +10,11 @@ public class Timer : MonoBehaviour
 
     private Text text;
 
+    public GameObject lose;
+    string min, sec;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,18 +31,59 @@ public class Timer : MonoBehaviour
         if(seconds <= 0)
         {
             minuts--;
-            seconds = 59;
+            seconds = 60;
         }
 
-        if(minuts == 0)
+
+        if (minuts < 10)
         {
+            min = "0" + minuts;
             
-            text.text = 0 + minuts + ":" + seconds.ToString("F2");
+            if(minuts < 0)
+            {
+                min = "0";
+            }
+        }
+
+
+        if(minuts > 0)
+        {
+            if(seconds < 9.5f)
+            {
+                sec = "0" + seconds.ToString("F0");
+            }
+            else
+            {
+                sec = seconds.ToString("F0");
+            }
         }
         else
         {
-            text.text = minuts + ":" + seconds.ToString("F0");
+            if (seconds < 9.5f)
+            {
+                sec = "0" + seconds.ToString("F2");
+            }
+            else
+            {
+                sec = seconds.ToString("F2");
+            }
         }
-        
+
+        text.text = min + ":" + sec;
+
+        if(minuts <= 0 && seconds <= 0)
+        {
+            lose.SetActive(true);
+
+            StartCoroutine("Lose");
+        }
+
+
+    }
+
+    IEnumerator Lose()
+    {
+        yield return new WaitForSeconds(3f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

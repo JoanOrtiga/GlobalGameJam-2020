@@ -259,6 +259,7 @@ public class CarSystem : MonoBehaviour
 
         if(errors.Count == 0)
         {
+            //GameObject.FindGameObjectWithTag("Score").GetComponentInChildren<>
             mom.transform.Find("Tic").GetComponent<Image>().enabled = true;
             mom.GetComponent<QuestManager>().finish();debugFinish = true;
         }
