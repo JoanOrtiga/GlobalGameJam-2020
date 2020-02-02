@@ -25,11 +25,8 @@ public class QuestManager : MonoBehaviour
             GetComponent<AudioSource>().Play();
             time = -500;
             car.GetComponent<CarSystem>().debugFinish = true;
+            GameObject.FindGameObjectWithTag("Score").GetComponentInChildren<Errors>().errors += 1;
             Destroy(gameObject, 0.5f);
-
-            Debug.Log("                . .                   ");
-            Debug.Log("");
-            Debug.Log("");
 
         }
     }
