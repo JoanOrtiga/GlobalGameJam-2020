@@ -91,7 +91,10 @@ public class PickUp : MonoBehaviour
         {
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {
-                GetComponent<Animator>().SetBool("IsOpen", true);
+                if (GetComponent<Animator>() != null)
+                {
+                    GetComponent<Animator>().SetBool("IsOpen", true);
+                }
                 objectToPickUp.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
                 childGameObject = Instantiate(objectToPickUp);
 
