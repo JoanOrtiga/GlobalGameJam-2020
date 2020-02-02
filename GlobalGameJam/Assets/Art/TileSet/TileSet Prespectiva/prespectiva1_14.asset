@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: prespectiva1_14
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 8167507562062867401, guid: 6e66dbcd0359fde48af4098150c51617,
+  m_Sprite: {fileID: 8167507562062867401, guid: c6031547d8e3e9e49869717378273665,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

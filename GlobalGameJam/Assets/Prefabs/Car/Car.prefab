@@ -946,6 +946,7 @@ GameObject:
   - component: {fileID: 132608862}
   - component: {fileID: -863717632459177172}
   - component: {fileID: 8459180615554283053}
+  - component: {fileID: 1050176914}
   m_Layer: 0
   m_Name: Car
   m_TagString: Car
@@ -1109,6 +1110,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0096325865, y: 0.01445103}
   m_Size: {x: 5.3535266, y: 2.285}
   m_Direction: 1
+--- !u!114 &1050176914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270905256384618841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbf99667d40b4d498657e50640fc636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 1208841886163296068, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
+  - {fileID: -3720026624970161084, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
+  - {fileID: -283748101403961699, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
+  - {fileID: 8786109187924651731, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
+  - {fileID: 2246796021725596071, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
+  - {fileID: 3402530784256816272, guid: 941015bca29f47e46aa8abe26c2b0589, type: 3}
 --- !u!1 &3541293642912963496
 GameObject:
   m_ObjectHideFlags: 0
