@@ -14,6 +14,13 @@ public class PaintMixter : MonoBehaviour
     public Sprite blueIcon;
     public Sprite redIcon;
     public Sprite yellowIcon;
+   
+
+    public GameObject IconOne;
+    public GameObject IconTwo;
+
+    private bool icon1Used = false;
+    private bool icon2Used = false;
 
     private bool blue = false;
     private bool red = false;
@@ -35,6 +42,9 @@ public class PaintMixter : MonoBehaviour
     public GameObject purpleGameObject;
     public GameObject orangeGameObject;
     public GameObject greenGameObject;
+
+
+
     private GameObject childGameObject;
 
     private float x = 1;
@@ -98,6 +108,14 @@ public class PaintMixter : MonoBehaviour
                 
                 if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.blue_paint && blue == false)
                 {
+                    if (icon1Used == false)
+                    {
+
+                    }
+                    else if (icon1Used == true && icon2Used == false)
+                    {
+
+                    }
                     other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = false;
                     Destroy(other.GetComponentInChildren<PlayerInventary>().GetComponentsInChildren<Transform>()[1].gameObject);
                     blue = true;
