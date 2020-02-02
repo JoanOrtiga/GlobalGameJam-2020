@@ -26,9 +26,7 @@ public class PlayerSpawner : MonoBehaviour
 
             controls.Player2.Interact.started += ctx => player2b = true;
             controls.Player2.Move.started += ctx => player2b = true;
-            controls.Player2.Move.canceled += ctx => controls.Player2.Disable();
             controls.Player2.Sprint.started += ctx => player2b = true;
-            controls.Player2.Sprint.canceled += ctx => controls.Player2.Disable();
     }
 
     private void Update()

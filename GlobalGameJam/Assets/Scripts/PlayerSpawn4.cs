@@ -24,11 +24,8 @@ public class PlayerSpawn4 : MonoBehaviour
         controls = new InputMaster();
 
         controls.Player4.Interact.started += ctx => player4b = true;
-        controls.Player4.Interact.canceled += ctx => controls.Player4.Disable();
         controls.Player4.Move.started += ctx => player4b = true;
-        controls.Player4.Move.canceled += ctx => controls.Player4.Disable();
         controls.Player4.Sprint.started += ctx => player4b = true;
-        controls.Player4.Sprint.canceled += ctx => controls.Player4.Disable();
     }
 
     private void Update()

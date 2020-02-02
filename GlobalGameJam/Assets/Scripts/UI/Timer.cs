@@ -75,7 +75,7 @@ public class Timer : MonoBehaviour
         {
             lose.SetActive(true);
             lose.GetComponentsInChildren<Text>()[1].text = "Score: " + transform.parent.GetComponentInChildren<Score>().score;
-            StartCoroutine("Win");
+            //StartCoroutine("Win");
         }
 
 
