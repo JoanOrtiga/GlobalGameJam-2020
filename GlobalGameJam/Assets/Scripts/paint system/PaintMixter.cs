@@ -49,6 +49,9 @@ public class PaintMixter : MonoBehaviour
 
     private GameObject childGameObject;
 
+    private int player;
+
+
     private float x = 1;
 
     private int maxColors = 2;
@@ -67,10 +70,20 @@ public class PaintMixter : MonoBehaviour
     {
         controls = new InputMaster();
         controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player1.Interact.started += ctx => player = 1;
         controls.Player1.Interact.canceled += ctx => x = 0;
 
         controls.Player2.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player2.Interact.started += ctx => player = 2;
         controls.Player2.Interact.canceled += ctx => x = 0;
+
+        controls.Player3.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player3.Interact.started += ctx => player = 3;
+        controls.Player3.Interact.canceled += ctx => x = 0;
+
+        controls.Player4.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player4.Interact.started += ctx => player = 4;
+        controls.Player4.Interact.canceled += ctx => x = 0;
     }
 
     // Update is called once per frame
@@ -102,7 +115,7 @@ public class PaintMixter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (finishMix == true && x == 1) //COgiendo la mezcla
+            if (finishMix == true && x == 1 && player == other.GetComponent<PlayerMovement>().PlayerNumber) //COgiendo la mezcla
             {
                 other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject = true;
                 childGameObject.transform.position = other.transform.GetComponentInChildren<PlayerInventary>().transform.position;
@@ -113,7 +126,7 @@ public class PaintMixter : MonoBehaviour
             }
 
             //PRIMERA PARTE poniendo colores 
-            if ((other.GetComponentInChildren<PlayerInventary>().playerHaveAObject) && x == 1 && isMixting == false)
+            if ((other.GetComponentInChildren<PlayerInventary>().playerHaveAObject) && x == 1 && isMixting == false && player == other.GetComponent<PlayerMovement>().PlayerNumber)
             {
                 
                 if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.blue_paint && blue == false)
