@@ -144,6 +144,41 @@ public class CarSystem : MonoBehaviour
                         }
                     }
                 }
+                else if(item.typeOfEffect() == "paint")
+                {
+                    carEffects[10].SetActive(true);
+
+                    print(carEffects[10]);
+                    
+                    foreach(Component em in carEffects[10].GetComponents(typeof(Component)))
+                    {
+                        print(em);
+                    }
+
+                    print(carEffects[10].GetComponent<FixObject>());
+
+                    switch (item.paintColor())
+                    {
+                        case paintings.blue_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.blue_paint;
+                            break;
+                        case paintings.red_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.red_paint;
+                            break;
+                        case paintings.yellow_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.yellow_paint;
+                            break;
+                        case paintings.orange_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.orange_paint;
+                            break;
+                        case paintings.purple_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.purple_paint;
+                            break;
+                        case paintings.green_paint:
+                            carEffects[10].GetComponent<FixObject>().whatToDetect = Item.green_paint;
+                            break;
+                    }
+                }
 
                 errors.Add(item);
             }
@@ -178,10 +213,10 @@ public class CarSystem : MonoBehaviour
         //    }
         //}
 
-        for (int i = 0; i < errors.Count; i++)
-        {
-            print(errors[i]);
-        }
+        //for (int i = 0; i < errors.Count; i++)
+        //{
+        //    print(errors[i]);
+        //}
     }
 
     // Update is called once per frame
@@ -191,6 +226,7 @@ public class CarSystem : MonoBehaviour
         {
             errors.Clear();
             this.GetComponent<CarMovement>().move = true;
+            print(GetComponent<CarMovement>().move);
             carStop.GetComponent<CarStop>().carStopped = false;
             debugFinish = false;
 
