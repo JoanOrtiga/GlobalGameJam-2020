@@ -28,21 +28,16 @@ public class Timer : MonoBehaviour
     {
         seconds -= Time.deltaTime;
 
-        if(seconds <= 0)
+        if(seconds < 0)
         {
             minuts--;
-            seconds = 60;
+                seconds = 59;
         }
 
 
         if (minuts < 10)
         {
             min = "0" + minuts;
-            
-            if(minuts < 0)
-            {
-                min = "0";
-            }
         }
 
 
