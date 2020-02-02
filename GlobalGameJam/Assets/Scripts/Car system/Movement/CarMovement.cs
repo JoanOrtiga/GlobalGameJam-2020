@@ -18,12 +18,6 @@ public class CarMovement : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
 
     private void FixedUpdate()
     {
@@ -33,7 +27,6 @@ public class CarMovement : MonoBehaviour
         {
             if (questCreated == false && inMechanic == true)
             {
-                print("XD");
                 questCreated = true;
                 GetComponent<CarSystem>().createQuest();
             }

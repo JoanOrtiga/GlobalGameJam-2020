@@ -21,6 +21,8 @@ public class CarSystem : MonoBehaviour
 
     void Awake()
     {
+        GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[Random.Range(0, GetComponent<paintCar>().cars.Count)];
+
         for (int i = 0; i < numberOfErrors; i++)
         {
             CarEffects item = null;
@@ -95,6 +97,8 @@ public class CarSystem : MonoBehaviour
 
             if (item != null)
             {
+                print(item);        
+
                 if (item.typeOfEffect() == "oil")
                 {
                     carEffects[9].SetActive(true);
@@ -107,20 +111,24 @@ public class CarSystem : MonoBehaviour
                 {
                     if (item.typeOfEffect() == "wheels")
                     {
-                        
+                        print(item.effPosition());
                         switch (item.effPosition())
                         {
                             case carPositions.front_left:
                                 carEffects[1].SetActive(true);
+                                print("rodas1");
                                 break;
                             case carPositions.front_right:
                                 carEffects[2].SetActive(true);
+                                print("rodas2");
                                 break;
                             case carPositions.back_left:
                                 carEffects[3].SetActive(true);
+                                print("rodas3");
                                 break;
                             case carPositions.back_right:
                                 carEffects[4].SetActive(true);
+                                print("rodas4");
                                 break;
                         }
                     }
@@ -147,15 +155,6 @@ public class CarSystem : MonoBehaviour
                 else if(item.typeOfEffect() == "paint")
                 {
                     carEffects[10].SetActive(true);
-
-                    print(carEffects[10]);
-                    
-                    foreach(Component em in carEffects[10].GetComponents(typeof(Component)))
-                    {
-                        print(em);
-                    }
-
-                    print(carEffects[10].GetComponent<FixObject>());
 
                     switch (item.paintColor())
                     {
@@ -186,37 +185,10 @@ public class CarSystem : MonoBehaviour
          //   print(item);
         }
 
-        //for (int i = 0; i < carEffects.Count; i++)
-        //{
-        //    int fails = 0;
-        //    foreach (CarEffects item in errors)
-        //    {
-        //        if (item.typeOfEffect() == "oil" || item.typeOfEffect() == "engine" /*|| item.typeOfEffect() == "paint"*/)
-        //        {
-        //            print(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() + " " + item.typeOfEffect());
-
-        //            if(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() != item.typeOfEffect())
-        //            {
-        //                fails++;
-        //            }
-        //        }
-        //        else if (item.typeOfEffect() == "wheels" || item.typeOfEffect() == "lights")
-        //        {
-        //            if (x.typeOfEffect() == item.typeOfEffect())
-        //            {
-        //                if (x.effPosition() == item.effPosition())
-        //                {
-        //                    whil = true;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        //for (int i = 0; i < errors.Count; i++)
-        //{
-        //    print(errors[i]);
-        //}
+       /* for (int i = 0; i < errors.Count; i++)
+        {
+            print(errors[i]);
+        }*/
     }
 
     // Update is called once per frame
@@ -226,7 +198,6 @@ public class CarSystem : MonoBehaviour
         {
             errors.Clear();
             this.GetComponent<CarMovement>().move = true;
-            print(GetComponent<CarMovement>().move);
             carStop.GetComponent<CarStop>().carStopped = false;
             debugFinish = false;
 
@@ -254,6 +225,31 @@ public class CarSystem : MonoBehaviour
         {
             if (item.typeOfEffect() == repaired)
             {
+                if(item.typeOfEffect() == "paint")
+                {
+                    switch (item.paintColor())
+                    {
+                        case paintings.blue_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[0];
+                            break;
+                        case paintings.red_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[4];
+                            break;
+                        case paintings.yellow_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[2];
+                            break;
+                        case paintings.orange_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[5];
+                            break;
+                        case paintings.purple_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[3];
+                            break;
+                        case paintings.green_paint:
+                            GetComponent<SpriteRenderer>().sprite = GetComponent<paintCar>().cars[1];
+                            break;
+                    }
+                }
+
                 mom.transform.GetChild(f).GetComponent<Image>().enabled = false;
                 errors.Remove(item);
                 break;

@@ -37,7 +37,7 @@ public class Wheels : CarEffects
 
     public Wheels()
     {
-        position = (carPositions)Random.Range(1, 5);
+        position = (carPositions)Random.Range(1, 4);
     }
 
     public override string typeOfEffect()
@@ -57,7 +57,7 @@ public class Lights : CarEffects
 
     public Lights()
     {
-        position = (carPositions)Random.Range(1, 5);
+        position = (carPositions)Random.Range(1, 4);
     }
 
     public override string typeOfEffect()
@@ -78,7 +78,7 @@ public class Paint : CarEffects
 
     public Paint()
     {
-        paint_color = (paintings)Random.Range(1, 7);
+        paint_color = (paintings)Random.Range(1, 6);
     }
 
     public override paintings paintColor()

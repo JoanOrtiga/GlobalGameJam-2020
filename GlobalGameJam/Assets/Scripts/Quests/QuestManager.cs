@@ -26,6 +26,11 @@ public class QuestManager : MonoBehaviour
             time = -500;
             car.GetComponent<CarSystem>().debugFinish = true;
             Destroy(gameObject, 0.5f);
+
+            Debug.Log("                . .                   ");
+            Debug.Log("");
+            Debug.Log("");
+
         }
     }
 
@@ -48,7 +53,6 @@ public class QuestManager : MonoBehaviour
         {
             switch (x.typeOfEffect())
             {
-                
                 case "lights":
                     images[f].sprite = icons[1];
                     break;
