@@ -8,6 +8,8 @@ public class CarSystem : MonoBehaviour
     public GameObject carStop;
     public GameObject carQuest;
 
+    public List<GameObject> carEffects = new List<GameObject>();
+
     private GameObject mom;
 
     public List<CarEffects> errors = new List<CarEffects>();
@@ -64,49 +66,121 @@ public class CarSystem : MonoBehaviour
                     break;
                 }
 
-                if(item != null)
+                if (item != null)
                 {
                     foreach (CarEffects x in errors)
                     {
-                        if(x.typeOfEffect() == "oil" || x.typeOfEffect() == "engine" || x.typeOfEffect() == "paint")
+                        if (x.typeOfEffect() == "oil" || x.typeOfEffect() == "engine" || x.typeOfEffect() == "paint")
                         {
                             if (x.typeOfEffect() == item.typeOfEffect())
                             {
                                 whil = true;
                             }
                         }
-                        else if(x.typeOfEffect() == "wheels" || x.typeOfEffect() == "lights")
+                        else if (x.typeOfEffect() == "wheels" || x.typeOfEffect() == "lights")
                         {
                             if (x.typeOfEffect() == item.typeOfEffect())
                             {
-                                if(x.effPosition() == item.effPosition())
+                                if (x.effPosition() == item.effPosition())
                                 {
                                     whil = true;
                                 }
                             }
-                        } 
+                        }
                     }
                 }
-                
-            } 
+
+            }
             while (whil);
 
-
-
-            if(item != null)
+            if (item != null)
             {
+                if (item.typeOfEffect() == "oil")
+                {
+                    carEffects[9].SetActive(true);
+                }
+                else if (item.typeOfEffect() == "engine")
+                {
+                    carEffects[0].SetActive(true);
+                }
+                else if (item.typeOfEffect() == "wheels" || item.typeOfEffect() == "lights")
+                {
+                    if (item.typeOfEffect() == "wheels")
+                    {
+                        
+                        switch (item.effPosition())
+                        {
+                            case carPositions.front_left:
+                                carEffects[1].SetActive(true);
+                                break;
+                            case carPositions.front_right:
+                                carEffects[2].SetActive(true);
+                                break;
+                            case carPositions.back_left:
+                                carEffects[3].SetActive(true);
+                                break;
+                            case carPositions.back_right:
+                                carEffects[4].SetActive(true);
+                                break;
+                        }
+                    }
+                    else if (item.typeOfEffect() == "lights")
+                    {
+
+                        switch (item.effPosition())
+                        {
+                            case carPositions.front_left:
+                                carEffects[5].SetActive(true);
+                                break;
+                            case carPositions.front_right:
+                                carEffects[6].SetActive(true);
+                                break;
+                            case carPositions.back_left:
+                                carEffects[7].SetActive(true);
+                                break;
+                            case carPositions.back_right:
+                                carEffects[8].SetActive(true);
+                                break;
+                        }
+                    }
+                }
+
                 errors.Add(item);
             }
-            
+
+         //   print(item);
         }
 
-        for (int e = 0; e < errors.Count; e++)
+        //for (int i = 0; i < carEffects.Count; i++)
+        //{
+        //    int fails = 0;
+        //    foreach (CarEffects item in errors)
+        //    {
+        //        if (item.typeOfEffect() == "oil" || item.typeOfEffect() == "engine" /*|| item.typeOfEffect() == "paint"*/)
+        //        {
+        //            print(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() + " " + item.typeOfEffect());
+
+        //            if(carEffects[i].GetComponent<FixObject>().whatToDetect.ToString() != item.typeOfEffect())
+        //            {
+        //                fails++;
+        //            }
+        //        }
+        //        else if (item.typeOfEffect() == "wheels" || item.typeOfEffect() == "lights")
+        //        {
+        //            if (x.typeOfEffect() == item.typeOfEffect())
+        //            {
+        //                if (x.effPosition() == item.effPosition())
+        //                {
+        //                    whil = true;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        for (int i = 0; i < errors.Count; i++)
         {
-            //print(errors[e]);
-            if (errors[e].typeOfEffect() == "wheels" || errors[e].typeOfEffect() == "lights")
-            {
-                //print(errors[e].effPosition());
-            }
+            print(errors[i]);
         }
     }
 
@@ -130,7 +204,8 @@ public class CarSystem : MonoBehaviour
 
         mom = Instantiate(carQuest, questCanvas.transform);
         mom.GetComponent<QuestManager>().SetupQuest(errors);
-      
+        mom.GetComponent<QuestManager>().car = gameObject;
+
     }
 
     public void repared(string repaired)
@@ -144,9 +219,16 @@ public class CarSystem : MonoBehaviour
             if (item.typeOfEffect() == repaired)
             {
                 mom.transform.GetChild(f).GetComponent<Image>().enabled = false;
+                errors.Remove(item);
                 break;
-            }   
+            }
             f++;
+        }
+
+        if(errors.Count == 0)
+        {
+            mom.transform.Find("Tic").GetComponent<Image>().enabled = true;
+            mom.GetComponent<QuestManager>().finish();debugFinish = true;
         }
     }
 }
