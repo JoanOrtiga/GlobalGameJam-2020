@@ -11,6 +11,10 @@ public class PaintMixter : MonoBehaviour
 
 
     //Primate colors
+    public Sprite blueIcon;
+    public Sprite redIcon;
+    public Sprite yellowIcon;
+
     private bool blue = false;
     private bool red = false;
     private bool yellow = false;
