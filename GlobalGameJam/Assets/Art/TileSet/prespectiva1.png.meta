@@ -1,0 +1,595 @@
+fileFormatVersion: 2
+guid: 6e66dbcd0359fde48af4098150c51617
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5648232302352209427
+    second: prespectiva1_0
+  - first:
+      213: 784443309120954572
+    second: prespectiva1_1
+  - first:
+      213: -8711042115234288235
+    second: prespectiva1_2
+  - first:
+      213: 1778604241827087781
+    second: prespectiva1_3
+  - first:
+      213: 3727509118245595439
+    second: prespectiva1_4
+  - first:
+      213: -1449353773639156795
+    second: prespectiva1_5
+  - first:
+      213: -3853140625455470191
+    second: prespectiva1_6
+  - first:
+      213: -8113889072159735932
+    second: prespectiva1_7
+  - first:
+      213: 9103063190749641724
+    second: prespectiva1_8
+  - first:
+      213: -6897496074422696916
+    second: prespectiva1_9
+  - first:
+      213: 3735983080347608161
+    second: prespectiva1_10
+  - first:
+      213: 1564631246422707693
+    second: prespectiva1_11
+  - first:
+      213: 3425219482705361705
+    second: prespectiva1_12
+  - first:
+      213: 1064145292735311024
+    second: prespectiva1_13
+  - first:
+      213: 8167507562062867401
+    second: prespectiva1_14
+  - first:
+      213: 6196903003811607125
+    second: prespectiva1_15
+  - first:
+      213: -5974322475679645160
+    second: prespectiva1_16
+  - first:
+      213: 5909840095228613570
+    second: prespectiva1_17
+  - first:
+      213: -836105811271151763
+    second: prespectiva1_18
+  - first:
+      213: 1727970057784949290
+    second: prespectiva1_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: prespectiva1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39db7a52dd5298f4583864b09c95f481
+      internalID: 5648232302352209427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3dbff1df68173409b964ce393fe1b5
+      internalID: 784443309120954572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036721c1f81c4f049828ffcac446e853
+      internalID: -8711042115234288235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edddfcac50572e47afe583c031df33a
+      internalID: 1778604241827087781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b255f8a60be159499ee714a79823ec9
+      internalID: 3727509118245595439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317524525ce9eb744bb6e24fb53b6348
+      internalID: -1449353773639156795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6430acc7df6dd6f409341196afa8f381
+      internalID: -3853140625455470191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2278ebefc0019ed46a30b7fdbf5f41bc
+      internalID: -8113889072159735932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0020400a6ccd704b928acc52ca563da
+      internalID: 9103063190749641724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c610405dc47f424e8c1d1c854c4847b
+      internalID: -6897496074422696916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce9d7908ca3e7449a2e00f2e825a831
+      internalID: 3735983080347608161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87612b950f881eb45bb644b4d12eec95
+      internalID: 1564631246422707693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f85f33844af2d4a9cb949427eb46e5
+      internalID: 3425219482705361705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291a0972e424476498f097db291f8dd7
+      internalID: 1064145292735311024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcd7396e23b24d42a350ce589acdd82
+      internalID: 8167507562062867401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500.8
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec68dc1bd4ffca14dadda5d2ab88038f
+      internalID: 6196903003811607125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.7999878
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d720475c72a6beb42959e07b8a5d9754
+      internalID: -5974322475679645160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0.7999878
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ff49c36269cca459a79741458690cf
+      internalID: 5909840095228613570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_18
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0.7999878
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e6ac2c65e9911498ca2ddf27ad9322
+      internalID: -836105811271151763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prespectiva1_19
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0.7999878
+        width: 500.25
+        height: 500.2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ed6f8123192bc41b3251afd89fce72
+      internalID: 1727970057784949290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
