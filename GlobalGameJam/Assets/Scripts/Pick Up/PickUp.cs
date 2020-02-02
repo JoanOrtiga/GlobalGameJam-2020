@@ -12,6 +12,8 @@ public class PickUp : MonoBehaviour
 
     private float x;
 
+    private int player;
+
     private void OnEnable()
     {
         controls.Enable();
@@ -25,19 +27,21 @@ public class PickUp : MonoBehaviour
     {
         controls = new InputMaster();
         
-        
-
         controls.Player1.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player1.Interact.started += ctx => player = 1;
         controls.Player1.Interact.canceled += ctx => x = 0;
 
         controls.Player2.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player2.Interact.started += ctx => player = 2;
         controls.Player2.Interact.canceled += ctx => x = 0;
 
-  //      controls.Player3.Interact.started += ctx => x = ctx.ReadValue<float>();
-   //     controls.Player3.Interact.canceled += ctx => x = 0;
+        controls.Player3.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player3.Interact.started += ctx => player = 3;
+        controls.Player3.Interact.canceled += ctx => x = 0;
 
-    //    controls.Player4.Interact.started += ctx => x = ctx.ReadValue<float>();
-    //    controls.Player4.Interact.canceled += ctx => x = 0;
+        controls.Player4.Interact.started += ctx => x = ctx.ReadValue<float>();
+        controls.Player4.Interact.started += ctx => player = 4;
+        controls.Player4.Interact.canceled += ctx => x = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -87,8 +91,10 @@ public class PickUp : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player") && x == 1)
+        if (other.CompareTag("Player") && x == 1 && player == other.GetComponent<PlayerMovement>().PlayerNumber)
         {
+            print(x + " " + player + " " + other.GetComponent<PlayerMovement>().PlayerNumber);
+
             if (other.transform.GetComponentInChildren<PlayerInventary>().playerHaveAObject == false)
             {
                 if (GetComponent<Animator>() != null)
