@@ -24,26 +24,25 @@ public class PlayerSpawner : MonoBehaviour
         controls = new InputMaster();
 
 
-        controls.Player2.Interact.started += ctx => player2b = true;
-        controls.Player2.Interact.canceled += ctx => controls.Player2.Disable();
-        controls.Player2.Move.started += ctx => player2b = true;
-        controls.Player2.Move.canceled += ctx => controls.Player2.Disable();
-        controls.Player2.Sprint.started += ctx => player2b = true;
-        controls.Player2.Sprint.canceled += ctx => controls.Player2.Disable();
+            controls.Player2.Interact.started += ctx => player2b = true;
+            controls.Player2.Move.started += ctx => player2b = true;
+            controls.Player2.Move.canceled += ctx => controls.Player2.Disable();
+            controls.Player2.Sprint.started += ctx => player2b = true;
+            controls.Player2.Sprint.canceled += ctx => controls.Player2.Disable();
 
-        controls.Player3.Interact.started += ctx => player3b = true;
-        controls.Player3.Interact.canceled += ctx => controls.Player3.Disable();
-        controls.Player3.Move.started += ctx => player3b = true;
-        controls.Player3.Move.canceled += ctx => controls.Player3.Disable();
-        controls.Player3.Sprint.started += ctx => player3b = true;
-        controls.Player3.Sprint.canceled += ctx => controls.Player3.Disable();
+            controls.Player3.Interact.started += ctx => player3b = true;
+            controls.Player3.Interact.canceled += ctx => controls.Player3.Disable();
+            controls.Player3.Move.started += ctx => player3b = true;
+            controls.Player3.Move.canceled += ctx => controls.Player3.Disable();
+            controls.Player3.Sprint.started += ctx => player3b = true;
+            controls.Player3.Sprint.canceled += ctx => controls.Player3.Disable();
 
-        controls.Player4.Interact.started += ctx => player4b = true;
-        controls.Player4.Interact.canceled += ctx => controls.Player4.Disable();
-        controls.Player4.Move.started += ctx => player4b = true;
-        controls.Player4.Move.canceled += ctx => controls.Player4.Disable();
-        controls.Player4.Sprint.started += ctx => player4b = true;
-        controls.Player4.Sprint.canceled += ctx => controls.Player4.Disable();
+            controls.Player4.Interact.started += ctx => player4b = true;
+            controls.Player4.Interact.canceled += ctx => controls.Player4.Disable();
+            controls.Player4.Move.started += ctx => player4b = true;
+            controls.Player4.Move.canceled += ctx => controls.Player4.Disable();
+            controls.Player4.Sprint.started += ctx => player4b = true;
+            controls.Player4.Sprint.canceled += ctx => controls.Player4.Disable();
     }
 
     private void Update()
@@ -52,6 +51,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             player2b = false;
             Instantiate(player2, new Vector2(1.55f, 0.9f), transform.rotation);
+            Destroy(gameObject);
             controls.Player2.Disable();
         }
 
