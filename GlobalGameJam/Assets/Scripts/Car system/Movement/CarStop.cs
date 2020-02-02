@@ -29,12 +29,15 @@ public class CarStop : MonoBehaviour
     {
         if (collision.CompareTag("Car"))
         {
+            if (!collision.GetComponent<CarMovement>().inMechanic)
+            {
+                collision.GetComponent<CarMovement>().move = false;
+                collision.GetComponent<CarMovement>().inMechanic = true;
+                collision.GetComponent<CarSystem>().carStop = gameObject;
+                carSpawner.GetComponent<CarSpawn>().spawn();
+                carStopped = true;
+            }
             
-            collision.GetComponent<CarMovement>().move = false;
-            collision.GetComponent<CarMovement>().inMechanic = true;
-            collision.GetComponent<CarSystem>().carStop = gameObject;
-            carSpawner.GetComponent<CarSpawn>().spawn();
-            carStopped = true;
         }
     }
 }

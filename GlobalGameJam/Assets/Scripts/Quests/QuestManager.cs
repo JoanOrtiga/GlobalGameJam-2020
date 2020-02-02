@@ -51,25 +51,38 @@ public class QuestManager : MonoBehaviour
                 
                 case "lights":
                     images[f].sprite = icons[1];
-                    
                     break;
                 case "wheels":
                     images[f].sprite = icons[5];
-                    
-
-                    break;
-                case "paint":
-                    images[f].sprite = icons[2];
-                    
-
-                    break;
+                     break;
                 case "engine":
                     images[f].sprite = icons[0];
-                    
-
                     break;
                 case "oil":
                     images[f].sprite = icons[6];
+                    break;
+                case "paint":
+                    switch (x.paintColor())
+                    {
+                        case paintings.blue_paint:
+                            images[f].sprite = icons[2];
+                            break;
+                        case paintings.red_paint:
+                            images[f].sprite = icons[4];
+                            break;
+                        case paintings.yellow_paint:
+                            images[f].sprite = icons[3];
+                            break;
+                        case paintings.orange_paint:
+                            images[f].sprite = icons[9];
+                            break;
+                        case paintings.purple_paint:
+                            images[f].sprite = icons[8];
+                            break;
+                        case paintings.green_paint:
+                            images[f].sprite = icons[7];
+                            break;
+                    }
                     
                     break;
             }
