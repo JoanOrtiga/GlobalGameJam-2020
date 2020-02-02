@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9221432535226051139}
   - component: {fileID: 6548940494440736409}
   - component: {fileID: 5946895447121408981}
+  - component: {fileID: 2722033907935051848}
   m_Layer: 0
   m_Name: Wheels WorkTable
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 448394239944836370}
   m_LocalRotation: {x: -0, y: 0, z: -1, w: -0.0000001872535}
   m_LocalPosition: {x: -0.45, y: -6.41, z: -7.040666}
-  m_LocalScale: {x: 0.91437554, y: 0.91437554, z: 0.91437554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1214990349
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 8697547672624776786, guid: a2106752cd4186a4a9255354a9781976,
+  m_Sprite: {fileID: 8828571615838880957, guid: c2c135e99309ee74b8ed96fbd55502bb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2037342, y: 1.2145455}
+    oldSize: {x: 0.9828283, y: 1.0245085}
     newSize: {x: 12.145116, y: 11.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,3 +145,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &2722033907935051848
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448394239944836370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.51225436
