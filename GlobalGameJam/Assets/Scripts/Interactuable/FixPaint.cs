@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FixObject : MonoBehaviour
+public class FixPaint : MonoBehaviour
 {
     private InputMaster controls;
     private float x;
@@ -86,39 +86,22 @@ public class FixObject : MonoBehaviour
         {
             if (other.GetComponentInChildren<PlayerInventary>().playerHaveAObject)
             {
-                if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == whatToDetect)
+                if (other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.blue_paint || other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.red_paint || other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.yellow_paint || other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.purple_paint || other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.green_paint || other.GetComponentInChildren<PlayerInventary>().transform.GetChild(0).GetComponent<itemInHand>().inHand == Item.orange_paint)
                 {
                     switch (whatToDetect)
-                    {
-                        case Item.engine_repaired:
-                            transform.GetComponentInParent<CarSystem>().repared("engine");
-                            break;
-                        case Item.oil:
-                            transform.GetComponentInParent<CarSystem>().repared("oil");
-                            break;
-                        case Item.light:
-                            transform.GetComponentInParent<CarSystem>().repared("lights");
-                            break;
-                        case Item.wheel:
+                    {    
+                        case Item.blue_paint:
                             transform.GetComponentInParent<CarSystem>().repared("wheels");
                             break;
-                        case Item.blue_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
-                            break;
                         case Item.red_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
                             break;
                         case Item.yellow_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
                             break;
                         case Item.green_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
                             break;
                         case Item.purple_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
                             break;
                         case Item.orange_paint:
-                            transform.GetComponentInParent<CarSystem>().repared("paint");
                             break;
                     }
 
@@ -134,6 +117,6 @@ public class FixObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+
     }
 }
