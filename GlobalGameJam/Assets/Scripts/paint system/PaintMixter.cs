@@ -254,12 +254,7 @@ public class PaintMixter : MonoBehaviour
             {
                 icon1Used = false;
                 icon2Used = false;
-                GetComponent<Animator>().SetBool("isWorking", false);
-                if(GetComponent<AudioSource>() is )
-                {
-                    GetComponent<AudioSource>().Stop();
-
-                }
+                GetComponent<Animator>().SetBool("isWorking", false);               
 
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
