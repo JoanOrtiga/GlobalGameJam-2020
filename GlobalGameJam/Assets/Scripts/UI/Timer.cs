@@ -74,14 +74,14 @@ public class Timer : MonoBehaviour
         if(minuts <= 0 && seconds <= 0)
         {
             lose.SetActive(true);
-
-            StartCoroutine("Lose");
+            lose.GetComponentsInChildren<Text>()[1].text = "Score: " + transform.parent.GetComponentInChildren<Score>().score;
+            StartCoroutine("Win");
         }
 
 
     }
 
-    IEnumerator Lose()
+    IEnumerator Win()
     {
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
