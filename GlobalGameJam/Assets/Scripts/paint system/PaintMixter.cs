@@ -231,8 +231,6 @@ public class PaintMixter : MonoBehaviour
                 icon2Used = false;
                 Destroy(GameObject.Find("Blue Icon"));
                 GetComponent<Animator>().SetBool("isWorking", false);
-                GetComponent<AudioSource>().Stop();
-
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 purpleGameObject.transform.position = this.gameObject.transform.position;
@@ -255,12 +253,6 @@ public class PaintMixter : MonoBehaviour
                 icon1Used = false;
                 icon2Used = false;
                 GetComponent<Animator>().SetBool("isWorking", false);
-                if(GetComponent<AudioSource>() is )
-                {
-                    GetComponent<AudioSource>().Stop();
-
-                }
-
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 orangeGameObject.transform.position = this.gameObject.transform.position;
@@ -282,8 +274,6 @@ public class PaintMixter : MonoBehaviour
                 icon1Used = false;
                 icon2Used = false;
                 GetComponent<Animator>().SetBool("isWorking", false);
-                GetComponent<AudioSource>().Stop();
-
                 canvas.transform.GetChild(1).GetComponent<Image>().fillAmount = 0;
                 canvas.gameObject.SetActive(false);
                 greenGameObject.transform.position = this.gameObject.transform.position;
@@ -300,7 +290,6 @@ public class PaintMixter : MonoBehaviour
     void ProgresBar()
     {
         GetComponent<Animator>().SetBool("isWorking", true);
-        //GetComponent<AudioSource>().Play();
         canvas.gameObject.SetActive(true);
         canvas.transform.GetChild(1).GetComponent<Image>().fillAmount += 1.0f / waitTime * Time.deltaTime;       
     }
