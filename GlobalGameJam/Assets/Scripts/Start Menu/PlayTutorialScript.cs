@@ -11,6 +11,7 @@ public class PlayTutorialScript : MonoBehaviour
     public GameObject exitButton;
 
     public GameObject controls;
+    public GameObject credits;
     public GameObject lights;
     public GameObject wheels;
     public GameObject oil;
@@ -28,6 +29,7 @@ public class PlayTutorialScript : MonoBehaviour
         tutorial.SetActive(true);
         startButton.SetActive(false);
         exitButton.SetActive(false);
+        credits.SetActive(false);
    
         
     }
